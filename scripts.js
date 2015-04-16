@@ -1,5 +1,4 @@
 /* AUthor: John Kottis
-* RIGHTMOVE SKILLTEST
 */
 
 var BlackJack = ( function( window, undefined ) {
