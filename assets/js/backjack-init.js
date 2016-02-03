@@ -1,13 +1,13 @@
 document.getElementById("js-restart").addEventListener("click", function(event){
-    BlackJackGame.initializeTable();
-    BlackJackGame.countPoints("user");
+    BlackJackGame.Core.initializeTable();
+    BlackJackGame.Core.countPoints("user");
 });
 
 document.getElementById("js-hit").addEventListener("click", function(event){
-      BlackJackGame.hitCard("user");
-      BlackJackGame.dropCard("user");      
+      BlackJackGame.Core.hitCard("user");
+      BlackJackGame.Core.dropCard("user");      
     });
 
 document.getElementById("js-stick").addEventListener("click", function(event){
-    BlackJackGame.stickAction();
+    BlackJackGame.Core.stickAction();
 });

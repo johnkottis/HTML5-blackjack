@@ -6,7 +6,7 @@
 
 var VeConfig = VeConfig || {};
 
-VeConfig.Helpers = (function () {
+BlackJackGame.Core = (function () {
 
   'use strict';
   // this object is used to store private variables and methods across multiple instantiations
