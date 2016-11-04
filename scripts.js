@@ -1,6 +1,11 @@
-/* AUthor: John Kottis
- */
-var BlackJack = (function (window, undefined) {
+/**
+* BlackJack Scripts
+*
+* Date: 04/11/2016
+* Author: John Kottis
+*/
+
+var BlackJack = (function(window, undefined) {
     'use strict';
     // this object is used to store private variables and methods across multiple instantiations
     let privates = {
@@ -33,21 +38,31 @@ var BlackJack = (function (window, undefined) {
         selectedCard: null
     };
 
-    function BlackJack () {
-
+    /**
+     * BlackJack Game Object
+     *
+     */
+    function BlackJack() {
         this.currentlyPlaying = true;
 
-        // SHUFFLE DECK
-        this.shuffleDeck = function shuffleDeck (currentDeck) {
-            for (var j, x, i = currentDeck.length; i; j = Math.floor(Math.random() * i),
+        /**
+         * Shuffles the deck
+         *
+         * @param {object} currentDeck   - Current Deck fo cards to shuffle
+         */
+        this.shuffleDeck = function shuffleDeck(currentDeck) {
+            for (let j, x, i = currentDeck.length; i; j = Math.floor(Math.random() * i),
                 x = currentDeck[--i],
                 currentDeck[i] = currentDeck[j],
                 currentDeck[j] = x);
             return currentDeck;
         };
 
-        // DEFINE WINNER
-        this.defineWinner = function defineWinner () {
+        /**
+         * Defines Game Winner
+         *
+         */
+        this.defineWinner = function defineWinner() {
             if (privates.points.user === 21) {
                 privates.winner = true;
                 this.notifyWinner();
@@ -67,8 +82,12 @@ var BlackJack = (function (window, undefined) {
             return privates.activeGame;
         };
 
-        // PICK A CARD & ADD IT TO THE USER'S SET OF CARDS
-        this.hitCard = function hitCard (userType) {
+        /**
+         * Picks and card and adds it in players card collection
+         *
+         * @param {int} userType   - User's type
+         */
+        this.hitCard = function hitCard(userType) {
             if (privates.points[userType] < 21) {
                 privates.deck.pop();
                 privates.selectedCard = privates.deck[privates.deck.length - 1];
@@ -79,20 +98,29 @@ var BlackJack = (function (window, undefined) {
             }
         };
 
-        // DROP HTML CARD
+        /**
+         * Drops HTML5 Card
+         *
+         * @param {int} userType   - User's type
+         */
         this.dropCard = function dropCard (userType) {
-            var tableSide = 'side-' + userType;
-            var tableSideNode = document.getElementById(tableSide);
-            var newCard = document.createElement('li');
-            var cardClass = 'class' + privates.selectedCard;
+            let tableSide = 'side-' + userType,
+                tableSideNode = document.getElementById(tableSide),
+                newCard = document.createElement('li'),
+                cardClass = 'class' + privates.selectedCard;
+
             newCard.className = cardClass;
             tableSideNode.appendChild(newCard);
         };
 
-        // NOTIFY WINNER
+        /**
+         * Notifies the winner
+         *
+         */
         this.notifyWinner = function notifyWinner () {
-            var notificationArea = document.getElementById('side-winner');
-            var newStatus = document.createElement('span');
+            let notificationArea = document.getElementById('side-winner'),
+                newStatus = document.createElement('span');
+
             if (privates.winner === true) {
                 var nodeStatus = document.createTextNode('User Won! Points: ' + privates.points.user + ' VS ' + privates.points.dealer);
             } else {
@@ -105,17 +133,17 @@ var BlackJack = (function (window, undefined) {
         };
 
         // CLEAR DOM
-        this.clearDom = function clearDom() {
+        this.clearDom = function clearDom () {
             // CLEAR HTML FROM PREVIOUS GAME RESULTS
-            var resultsCards = document.getElementById('side-user');
+            let resultsCards = document.getElementById('side-user');
             while (resultsCards.firstChild) {
                 resultsCards.removeChild(resultsCards.firstChild);
             }
-            var resultsCards = document.getElementById('side-dealer');
+            let resultsCards = document.getElementById('side-dealer');
             while (resultsCards.firstChild) {
                 resultsCards.removeChild(resultsCards.firstChild);
             }
-            var resultsWinner = document.getElementById('side-winner');
+            let resultsWinner = document.getElementById('side-winner');
             while (resultsCards.firstChild) {
                 resultsCards.removeChild(resultsCards.firstChild);
             }
@@ -126,7 +154,7 @@ var BlackJack = (function (window, undefined) {
         // COUNT POINTS
         this.countPoints = function countPoints (userType) {
             privates.points[userType] = 0;
-            for (var i = 0; i < privates.cards[userType].length; i++) {
+            for (let i = 0; i < privates.cards[userType].length; i++) {
                 (privates.cards[userType][i].charAt(1) == '-') ?
                 ((privates.cards[userType][i].charAt(0) == '1') ?
                     ((privates.points[userType] < 11) ? privates.points[userType] += 11 : privates.points[userType] += 1) :
@@ -182,16 +210,16 @@ var BlackJack = (function (window, undefined) {
 // INITIALIZE GAME & BIND EVENTS
 var BlackJackGame = new BlackJack();
 
-document.getElementById('js-restart').addEventListener('click', function (event) {
+document.getElementById('js-restart').addEventListener('click', function(event) {
     BlackJackGame.initializeTable();
     BlackJackGame.countPoints('user');
 });
 
-document.getElementById('js-hit').addEventListener('click', function (event) {
+document.getElementById('js-hit').addEventListener('click', function(event) {
     BlackJackGame.hitCard('user');
     BlackJackGame.dropCard('user');
 });
 
-document.getElementById('js-stick').addEventListener('click', function (event) {
+document.getElementById('js-stick').addEventListener('click', function(event) {
     BlackJackGame.stickAction();
 });
