@@ -1,5 +1,5 @@
 html, body {
-	color: #000;
+    color: #000;
 	font-family: 'Lato', sans-serif;
 	font-size: 11px;
 	height: 100%;
@@ -15,108 +15,210 @@ html, body {
 
 /* GAME TABLE */
 .tableDeck {
-	background-color: #173c11;
-	display: block;
-	float: left;
-	height: 180px;
-	padding: 30px;
-	position: relative;
-	width: 500px;
+	background-color: # 173 c11;
+    display: block;
+    float: left;
+    height: 180 px;
+    padding: 30 px;
+    position: relative;
+    width: 500 px;
 }
 
-.userSide, 
+.userSide,
 .dealerSide {
-	left: 0;
-	margin: 0;
-	min-height: 99px;
-	padding: 0;
-	position: relative;
-	width: 100%;
+    left: 0;
+    margin: 0;
+    min - height: 99 px;
+    padding: 0;
+    position: relative;
+    width: 100 % ;
 }
 .topSide {
-	top: 0;
+    top: 0;
 }
 
 .bottomSide {
-	bottom: 0;
+    bottom: 0;
 }
 
 /* CARDS */
 .tableDeck li {
-	background: url("orderedDeck.png") no-repeat scroll 0 0 / 650px 300px transparent;
-	display: inline-block;
-	float: left;
-	height: 75px;
-	width: 50px;
-	margin-right: 10px;
+    background: url("orderedDeck.png") no - repeat scroll 0 0 / 650 px 300 px transparent;
+    display: inline - block;
+    float: left;
+    height: 75 px;
+    width: 50 px;
+    margin - right: 10 px;
 }
 
-.tableDeck li.class1-of-clubs { background-position: 0 0;}
-.tableDeck li.class2-of-clubs { background-position: -50px 0;}
-.tableDeck li.class3-of-clubs { background-position: -100px 0;}
-.tableDeck li.class4-of-clubs { background-position: -150px 0;}
-.tableDeck li.class5-of-clubs { background-position: -200px 0;}
-.tableDeck li.class6-of-clubs { background-position: -250px 0;}
-.tableDeck li.class7-of-clubs { background-position: -300px 0;}
-.tableDeck li.class8-of-clubs { background-position: -350px 0;}
-.tableDeck li.class9-of-clubs { background-position: -400px 0;}
-.tableDeck li.classten-of-clubs { background-position: -450px 0;}
-.tableDeck li.classjack-of-clubs { background-position: -500px 0;}
-.tableDeck li.classqueen-of-clubs { background-position: -550px 0;}
-.tableDeck li.classking-of-clubs { background-position: -600px 0;}
-.tableDeck li.class1-of-spades { background-position: 0 -75px;}
-.tableDeck li.class2-of-spades { background-position: -50px -75px;}
-.tableDeck li.class3-of-spades { background-position: -100px -75px;}
-.tableDeck li.class4-of-spades { background-position: -150px -75px;}
-.tableDeck li.class5-of-spades { background-position: -200px -75px;}
-.tableDeck li.class6-of-spades { background-position: -250px -75px;}
-.tableDeck li.class7-of-spades { background-position: -300px -75px;}
-.tableDeck li.class8-of-spades { background-position: -350px -75px;}
-.tableDeck li.class9-of-spades { background-position: -400px -75px;}
-.tableDeck li.classten-of-spades { background-position: -450px -75px;}
-.tableDeck li.classjack-of-spades { background-position: -500px -75px;}
-.tableDeck li.classqueen-of-spades { background-position: -550px -75px;}
-.tableDeck li.classking-of-spades { background-position: -600px -75px;}
-.tableDeck li.class1-of-hearts { background-position: 0 -150px;}
-.tableDeck li.class2-of-hearts { background-position: -50px -150px;}
-.tableDeck li.class3-of-hearts { background-position: -100px -150px;}
-.tableDeck li.class4-of-hearts { background-position: -150px -150px;}
-.tableDeck li.class5-of-hearts { background-position: -200px -150px;}
-.tableDeck li.class6-of-hearts { background-position: -250px -150px;}
-.tableDeck li.class7-of-hearts { background-position: -300px -150px;}
-.tableDeck li.class8-of-hearts { background-position: -350px -150px;}
-.tableDeck li.class9-of-hearts { background-position: -400px -150px;}
-.tableDeck li.classten-of-hearts { background-position: -450px -150px;}
-.tableDeck li.classjack-of-hearts { background-position: -500px -150px;}
-.tableDeck li.classqueen-of-hearts { background-position: -550px -150px;}
-.tableDeck li.classking-of-hearts { background-position: -600px -150px;}
-.tableDeck li.class1-of-diamonds { background-position: 0 -225px;}
-.tableDeck li.class2-of-diamonds { background-position: -50px -225px;}
-.tableDeck li.class3-of-diamonds { background-position: -100px -225px;}
-.tableDeck li.class4-of-diamonds { background-position: -150px -225px;}
-.tableDeck li.class5-of-diamonds { background-position: -200px -225px;}
-.tableDeck li.class6-of-diamonds { background-position: -250px -225px;}
-.tableDeck li.class7-of-diamonds { background-position: -300px -225px;}
-.tableDeck li.class8-of-diamonds { background-position: -350px -225px;}
-.tableDeck li.class9-of-diamonds { background-position: -400px -225px;}
-.tableDeck li.classten-of-diamonds { background-position: -450px -225px;}
-.tableDeck li.classjack-of-diamonds { background-position: -500px -225px;}
-.tableDeck li.classqueen-of-diamonds { background-position: -550px -225px;}
-.tableDeck li.classking-of-diamonds { background-position: -600px -225px;}
-
-
+.tableDeck li.class1 - of - clubs {
+        background - position: 0 0;
+    }
+    .tableDeck li.class2 - of - clubs {
+        background - position: -50 px 0;
+    }
+    .tableDeck li.class3 - of - clubs {
+        background - position: -100 px 0;
+    }
+    .tableDeck li.class4 - of - clubs {
+        background - position: -150 px 0;
+    }
+    .tableDeck li.class5 - of - clubs {
+        background - position: -200 px 0;
+    }
+    .tableDeck li.class6 - of - clubs {
+        background - position: -250 px 0;
+    }
+    .tableDeck li.class7 - of - clubs {
+        background - position: -300 px 0;
+    }
+    .tableDeck li.class8 - of - clubs {
+        background - position: -350 px 0;
+    }
+    .tableDeck li.class9 - of - clubs {
+        background - position: -400 px 0;
+    }
+    .tableDeck li.classten - of - clubs {
+        background - position: -450 px 0;
+    }
+    .tableDeck li.classjack - of - clubs {
+        background - position: -500 px 0;
+    }
+    .tableDeck li.classqueen - of - clubs {
+        background - position: -550 px 0;
+    }
+    .tableDeck li.classking - of - clubs {
+        background - position: -600 px 0;
+    }
+    .tableDeck li.class1 - of - spades {
+        background - position: 0 - 75 px;
+    }
+    .tableDeck li.class2 - of - spades {
+        background - position: -50 px - 75 px;
+    }
+    .tableDeck li.class3 - of - spades {
+        background - position: -100 px - 75 px;
+    }
+    .tableDeck li.class4 - of - spades {
+        background - position: -150 px - 75 px;
+    }
+    .tableDeck li.class5 - of - spades {
+        background - position: -200 px - 75 px;
+    }
+    .tableDeck li.class6 - of - spades {
+        background - position: -250 px - 75 px;
+    }
+    .tableDeck li.class7 - of - spades {
+        background - position: -300 px - 75 px;
+    }
+    .tableDeck li.class8 - of - spades {
+        background - position: -350 px - 75 px;
+    }
+    .tableDeck li.class9 - of - spades {
+        background - position: -400 px - 75 px;
+    }
+    .tableDeck li.classten - of - spades {
+        background - position: -450 px - 75 px;
+    }
+    .tableDeck li.classjack - of - spades {
+        background - position: -500 px - 75 px;
+    }
+    .tableDeck li.classqueen - of - spades {
+        background - position: -550 px - 75 px;
+    }
+    .tableDeck li.classking - of - spades {
+        background - position: -600 px - 75 px;
+    }
+    .tableDeck li.class1 - of - hearts {
+        background - position: 0 - 150 px;
+    }
+    .tableDeck li.class2 - of - hearts {
+        background - position: -50 px - 150 px;
+    }
+    .tableDeck li.class3 - of - hearts {
+        background - position: -100 px - 150 px;
+    }
+    .tableDeck li.class4 - of - hearts {
+        background - position: -150 px - 150 px;
+    }
+    .tableDeck li.class5 - of - hearts {
+        background - position: -200 px - 150 px;
+    }
+    .tableDeck li.class6 - of - hearts {
+        background - position: -250 px - 150 px;
+    }
+    .tableDeck li.class7 - of - hearts {
+        background - position: -300 px - 150 px;
+    }
+    .tableDeck li.class8 - of - hearts {
+        background - position: -350 px - 150 px;
+    }
+    .tableDeck li.class9 - of - hearts {
+        background - position: -400 px - 150 px;
+    }
+    .tableDeck li.classten - of - hearts {
+        background - position: -450 px - 150 px;
+    }
+    .tableDeck li.classjack - of - hearts {
+        background - position: -500 px - 150 px;
+    }
+    .tableDeck li.classqueen - of - hearts {
+        background - position: -550 px - 150 px;
+    }
+    .tableDeck li.classking - of - hearts {
+        background - position: -600 px - 150 px;
+    }
+    .tableDeck li.class1 - of - diamonds {
+        background - position: 0 - 225 px;
+    }
+    .tableDeck li.class2 - of - diamonds {
+        background - position: -50 px - 225 px;
+    }
+    .tableDeck li.class3 - of - diamonds {
+        background - position: -100 px - 225 px;
+    }
+    .tableDeck li.class4 - of - diamonds {
+        background - position: -150 px - 225 px;
+    }
+    .tableDeck li.class5 - of - diamonds {
+        background - position: -200 px - 225 px;
+    }
+    .tableDeck li.class6 - of - diamonds {
+        background - position: -250 px - 225 px;
+    }
+    .tableDeck li.class7 - of - diamonds {
+        background - position: -300 px - 225 px;
+    }
+    .tableDeck li.class8 - of - diamonds {
+        background - position: -350 px - 225 px;
+    }
+    .tableDeck li.class9 - of - diamonds {
+        background - position: -400 px - 225 px;
+    }
+    .tableDeck li.classten - of - diamonds {
+        background - position: -450 px - 225 px;
+    }
+    .tableDeck li.classjack - of - diamonds {
+        background - position: -500 px - 225 px;
+    }
+    .tableDeck li.classqueen - of - diamonds {
+        background - position: -550 px - 225 px;
+    }
+    .tableDeck li.classking - of - diamonds {
+        background - position: -600 px - 225 px;
+    }
 
 /* NOTIFICATION AREA & USER ACTIONS PANEL */
 .userActions, .sideWinner {
-	float: left;
-	width: 180px;
-	padding: 10px;
+    float: left;
+    width: 180 px;
+    padding: 10 px;
 }
 
 /* USER BUTTONS */
 .userActions button {
-	background: #efefef;
-	border: 1px solid #333;
+    background: #efefef;
+    border: 1 px solid #333;
 	clear: both;
 	float: left;
 	margin: 0 0 20px;
@@ -129,4 +231,3 @@ html, body {
 	color: 270781;
 	text-align: center;
 }
-
