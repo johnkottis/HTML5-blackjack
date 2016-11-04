@@ -1,6 +1,5 @@
 /* AUthor: John Kottis
 */
-
 var BlackJack = ( function( window, undefined ) {
   'use strict';
   // this object is used to store private variables and methods across multiple instantiations
@@ -112,20 +111,20 @@ var BlackJack = ( function( window, undefined ) {
     // CLEAR DOM
     this.clearDom = function clearDom() {
       // CLEAR HTML FROM PREVIOUS GAME RESULTS
-      var resultsCards = document.getElementById("side-user");
+      var resultsCards = document.getElementById('side-user');
       while (resultsCards.firstChild) {
           resultsCards.removeChild(resultsCards.firstChild);
       }
-      var resultsCards = document.getElementById("side-dealer");
+      var resultsCards = document.getElementById('side-dealer');
       while (resultsCards.firstChild) {
           resultsCards.removeChild(resultsCards.firstChild);
       }
-      var resultsWinner = document.getElementById("side-winner");
+      var resultsWinner = document.getElementById('side-winner');
       while (resultsCards.firstChild) {
           resultsCards.removeChild(resultsCards.firstChild);
       }
-      document.getElementById('js-hit').style.display = "block";
-      document.getElementById('js-stick').style.display = "block";
+      document.getElementById('js-hit').style.display = 'block';
+      document.getElementById('js-stick').style.display = 'block';
     };
 
     // COUNT POINTS
@@ -156,20 +155,20 @@ var BlackJack = ( function( window, undefined ) {
         user:[],
         dealer:[]
       };
-      this.hitCard("user");
-      this.dropCard("user");
-      this.hitCard("user");
-      this.dropCard("user");
-      this.hitCard("dealer");
-      this.dropCard("dealer");
+      this.hitCard('dealer');
+      this.dropCard('dealer');
+      this.hitCard('dealer');
+      this.dropCard('dealer');
+      this.hitCard('dealer');
+      this.dropCard('dealer');
     };
 
     // USER STICKS AND WAITS FOR DEALER'S ACTIONS
     this.stickAction = function stickAction() {
       while (privates.points.user > privates.points.dealer) {
-        this.hitCard("dealer");
-        this.dropCard("dealer");
-        this.countPoints("dealer");
+        this.hitCard('dealer');
+        this.dropCard('dealer');
+        this.countPoints('dealer');
       }
       this.defineWinner();
       this.notifyWinner();
@@ -187,16 +186,16 @@ var BlackJack = ( function( window, undefined ) {
 // INITIALIZE GAME & BIND EVENTS
 var BlackJackGame = new BlackJack();
 
-document.getElementById("js-restart").addEventListener("click", function(event){
+document.getElementById('js-restart').addEventListener('click', function (event){
     BlackJackGame.initializeTable();
-    BlackJackGame.countPoints("user");
+    BlackJackGame.countPoints('user');
 });
 
-document.getElementById("js-hit").addEventListener("click", function(event){
-      BlackJackGame.hitCard("user");
+document.getElementById('js-hit').addEventListener('click', function (event){
+      BlackJackGame.hitCard('user');
       BlackJackGame.dropCard("user");      
     });
 
-document.getElementById("js-stick").addEventListener("click", function(event){
+document.getElementById('js-stick').addEventListener('click', function (event){
     BlackJackGame.stickAction();
 });
