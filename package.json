@@ -1,7 +1,7 @@
 {
-    "name": "VeMerchantGrunt",
+    "name": "HTML%blackjack",
     "version": "0.1.0",
-    "author": "Pink Panther Team",
+    "author": "John Kottis",
     "private": true,
     "devDependencies": {
         "grunt-autoprefixer": "*",
